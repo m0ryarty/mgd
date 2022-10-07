@@ -1,69 +1,126 @@
 .caixa{
     display: grid;    
     grid-template-columns: 10% 10% 80%;
-    grid-template-rows: 650px;
+    grid-template-rows: auto;
     width: 100%;
-    height: 650px; 
+    height: 650px;
+    
     
     
 }
 
-#apresenta {
-padding: 5%;
-background-color: aliceblue;
-overflow-y: scroll;
-scroll-behavior: auto;
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+blockquote {
+    font-size: 0.8em;
+    margin-left: 20%;
+    font-style: italic;
 }
 
 #menu {
-    grid-column: span1;
-    background-color: rgb(25, 25, 59);
-    padding-top: 15px;
+    grid-column: 1/ span 2;
+    display: none;
+    height: fit-content;    
 }
 
-#menu nav {
-        
-    width: 90%;    
-    font-size: 1.8vw;    
-    padding-left: 5px;    
+.fundo_menu {
+    grid-column: 1/ span 2;
+    display: block;
+    background-color: #080325;
+    
+}
+
+#menu ul {
+    padding: 5px 15px;
+    
+
+}
+
+#menu li {    
+    width: 90%;
+    color: antiquewhite;
+    font-size: 2vw;    
     margin: 3px;
     cursor: pointer;
-    color: antiquewhite;
-}
+    list-style: none ;
 
-#aba {       
-    text-align:center;    
-    background-color: darkseagreen;
-    
-    
     
 }
 
-#aba > h6{
-    font-size: 6vw;
-    width: auto;
+
+#presenta{
+    grid-column: 3;
+    display: none;
+    font-size: 22px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #2c302e #EBE4E4;
+  padding: 0 15px;   
+}
+
+p {
+    text-indent: 50px;
+    margin: 12px 0;
+    text-align: justify;
+}
+
+h4 {
+    color: rgb(24, 95, 167);
+}
+
+#aba {
+    grid-column: 1;     
+    
+}
+
+#aba > h1 {
+    width: 100%;
     height: 100%;
-
-    margin: 0px;
-    border: solid 2px black;
-    padding: 0px 10px;
+    background-color: rgb(1, 21, 22);
+    font-size: 6vw;
+    margin: 0;
+    align-content: center;
+    writing-mode: vertical-lr;    
+    text-align: center;
     color: grey;
-    writing-mode:vertical-lr;
-    text-align:center;
     cursor: pointer;    
 }
 
-    
-
-
-#conteudo {     
-    background-color: rgb(212, 208, 154);
-    font-size: 1.5vw;    
-    padding: 50px;
-    overflow-y: scroll;
-    scroll-behavior: auto;
+#conteudo {
+    grid-column: 2 / span 2;   
+    background-color: rgb(241, 235, 226);
+    font-size: 22px;
+    overflow-y: auto;    
+  padding: 0 15px;
 }
 
-.capitulos {
+#conteudo {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(1, 21, 22) #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+#conteudo::-webkit-scrollbar {
+    width: 12px;
+  }
+
+#conteudo::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+#conteudo::-webkit-scrollbar-thumb {
+    background-color: rgb(1, 21, 22);
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+  }
+
+
+#capitulos {
     display: none;
+    
 }
