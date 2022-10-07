@@ -1,109 +1,58 @@
-
-    var caixa = document.getElementById('caixa');
-    var menu = document.getElementById('menu');
-    var apresenta = document.getElementById('apresenta');
+ let menu = document.getElementById('menu');
     
-    var aba = document.getElementById('aba');
+    let aba = document.getElementById('aba');
     
-    var conteudo = document.getElementById('conteudo');
+    let conteudo = document.getElementById('conteudo');
+    let presenta = document.getElementById('presenta');
     
-aba.style.display = 'none';
-conteudo.style.gridColumn = 'none';
-
     
-menu.addEventListener('click', obterId);
-aba.addEventListener('click', tamanhoDoMenu);
-
-    
-    function obterId(e) {
-    var x = e.target.getAttribute('id');
-    var y = e.target.innerHTML;
-        
-        
-        if (x != null) {
-            aba.style.display = 'none';
-            apresenta.style.display = 'block';
-            conteudo.style.gridColumn = 'none';
-        } else {
-            try {
-                menu.style.display = 'none';
-                apresenta.style.display = 'none';
-                aba.style.display = 'block';
-                conteudo.style.gridColumn = '2 / span2';
-                
-                var z = y.replace(' ', '_');
-                aba.firstElementChild.innerHTML = y;            
-    
-                item = document.getElementById(z);  
-                
-                conteudo.innerHTML = item.innerHTML;
-        } catch (error) {            
-        
-        }
-            console.log('Não');
-            
-        }
-}
-
-function tamanhoDoMenu() {    
-    menu.style.display = 'block';
     aba.style.display = 'none';
-    conteudo.style.gridColumn = 'none';
-    conteudo.innerHTML = '';
-}
-
-
+    conteudo.style.display = 'none';
+    menu.style.display = 'block';
+    presenta.style.display = 'block';
     
-/* 
-function tamanhoDoMenu() {
     
-        menu.style.display = 'block';
-        aba.style.display = 'none';
-        conteudo.style.gridColumn = 'none';
-        conteudo.innerHTML = '';
-            
-    } else {
-        
-    }
-}
-
+    
 function clicarTransformar() {
-    
-        x = e.target.innerHTML;
-    
-        
-        
-        
-    
-}
-    
-
-
-var x;
-
-
-   
-menu.addEventListener('click', obterId);
-    
-    console.log(x);
-    
-    
-          
     menu.addEventListener('click', tamanhoDoMenu);
     aba.addEventListener('click', tamanhoDoMenu);
-    conteudo.addEventListener('click', tamanhoDoMenu);
     
     
     }
 
-    
+    function tamanhoDoMenu() {
+        if (menu.style.display == 'none') {
+            menu.style.display = 'block';
+            presenta.style.display = 'block';
+            aba.style.display = 'none';
+            conteudo.style.display = 'none';
+            conteudo.innerHTML = '';
+        } else {
+            menu.style.display = 'none';
+            presenta.style.display = 'none';
+            aba.style.display = 'block';
+            conteudo.style.display = 'block';
+        }
   
 }
 
+menu.addEventListener('click', obterId);
+
+function obterId(e) {    
+    x = e.target.innerHTML;
+    try {
+        aba.firstElementChild.innerHTML = x;
+    y = x.replace(' ', '_');
+    
+    item = document.getElementById(y);
+    
+    conteudo.innerHTML = item.innerHTML;
+    } catch (error) {
+        
+    }
+        
+}
 
 
 
-
-
-
-clicarTransformar();*/
+clicarTransformar();
