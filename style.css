@@ -99,21 +99,21 @@ h4 {
   padding: 0 15px;
 }
 
-#conteudo {
+* {
     scrollbar-width: auto;
     scrollbar-color: rgb(1, 21, 22) #ffffff;
   }
 
   /* Chrome, Edge, and Safari */
-#conteudo::-webkit-scrollbar {
+*::-webkit-scrollbar {
     width: 12px;
   }
 
-#conteudo::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #ffffff;
   }
 
-#conteudo::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: rgb(1, 21, 22);
     border-radius: 10px;
     border: 1px solid #ffffff;
